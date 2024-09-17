@@ -8,6 +8,9 @@ function createGrid(size = 16) {
     for (let j = 0; j < size; j++) {
       const cell = document.createElement("div");
       cell.classList.add("gridCell");
+      cell.onmouseenter = () => {
+        cell.classList.add("on");
+      };
       row.appendChild(cell);
     }
   }

@@ -35,3 +35,7 @@
     height: 100%;
     background-color: #000;
 }
+
+.pageContainer .artContainer #gridContainer .gridRow .gridCell.on {
+    background-color: #f00;
+}
