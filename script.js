@@ -1,5 +1,12 @@
-const OPACITY_START = 0.1;
+const OPACITY_START = 1;
 const OPACITY_INCREMENT = 0.1;
+const KH = 10;
+const KS = 10;
+const KL = 1;
+
+let h = 0;
+let s = 50;
+let l = 50;
 
 function createGrid(size = 16) {
   const gridContainer = document.getElementById("gridContainer");
@@ -13,7 +20,11 @@ function createGrid(size = 16) {
       cell.classList.add("gridCell");
       cell.style.opacity = OPACITY_START;
       cell.onmouseenter = () => {
-        cell.style.backgroundColor = "#f00";
+        h = h + KH * (2 * Math.random() - 1);
+        s = s + KS * (2 * Math.random() - 1);
+        l = l + KL * (2 * Math.random() - 1);
+
+        cell.style.backgroundColor = `hsl(${h},${s}%,${l}%)`;
         const opacity = parseFloat(cell.style.opacity);
         cell.style.opacity = opacity + OPACITY_INCREMENT;
       };
