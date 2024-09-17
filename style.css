@@ -1,8 +1,10 @@
 .pageContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    gap: 24px;
 }
 
 .pageContainer .artContainer {
@@ -20,14 +22,14 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    gap: 8px;
+    gap: 2px;
 }
 
 .pageContainer .artContainer #gridContainer .gridRow {
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 8px;
+    gap: 2px;
 }
 
 .pageContainer .artContainer #gridContainer .gridRow .gridCell {
