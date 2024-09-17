@@ -1,0 +1,37 @@
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pageContainer .artContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px;
+    width: 640px;
+    padding: 24px;
+    border: 1px solid #000;
+}
+
+.pageContainer .artContainer #gridContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 8px;
+}
+
+.pageContainer .artContainer #gridContainer .gridRow {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+}
+
+.pageContainer .artContainer #gridContainer .gridRow .gridCell {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
