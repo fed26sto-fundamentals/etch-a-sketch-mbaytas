@@ -27,6 +27,8 @@
 
 .pageContainer .artContainer #gridContainer .gridRow {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     gap: 2px;
@@ -36,8 +38,4 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-}
-
-.pageContainer .artContainer #gridContainer .gridRow .gridCell.on {
-    background-color: #f00;
 }

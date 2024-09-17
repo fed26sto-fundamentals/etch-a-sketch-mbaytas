@@ -1,3 +1,6 @@
+const OPACITY_START = 0.1;
+const OPACITY_INCREMENT = 0.1;
+
 function createGrid(size = 16) {
   const gridContainer = document.getElementById("gridContainer");
   gridContainer.innerHTML = "";
@@ -8,8 +11,11 @@ function createGrid(size = 16) {
     for (let j = 0; j < size; j++) {
       const cell = document.createElement("div");
       cell.classList.add("gridCell");
+      cell.style.opacity = OPACITY_START;
       cell.onmouseenter = () => {
-        cell.classList.add("on");
+        cell.style.backgroundColor = "#f00";
+        const opacity = parseFloat(cell.style.opacity);
+        cell.style.opacity = opacity + OPACITY_INCREMENT;
       };
       row.appendChild(cell);
     }
